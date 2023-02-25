@@ -7,14 +7,14 @@ import (
 )
 
 type User struct {
-	ID        primitive.ObjectID `bson:"_id, omitempty" json:"id"`
+	ID        primitive.ObjectID `bson:"_id,omitempty" json:"id"`
 	Name      string             `bson:"name" json:"name"`
 	LastName  string             `bson:"lastName" json:"lastName"`
-	BirthDay  time.Time          `bson:"birthDay" json:"birthDay"`
+	Birthday  time.Time          `bson:"birthday" json:"birthday"`
 	Email     string             `bson:"email" json:"email"`
-	Password  string             `bson:"password" json:"password, omitempty"`
-	Avatar    string             `bson:"avatar" json:"avatar, omitempty"`
-	Biography string             `bson:"biography" json:"biography, omitempty"`
-	Location  string             `bson:"location" json:"location, omitempty"`
-	WebSite   string             `bson:"webSite" json:"webSite, omitempty"`
+	Password  string             `bson:"password" json:"password,omitempty"`
+	Avatar    string             `bson:"avatar" json:"avatar,omitempty"`
+	Biography string             `bson:"biography" json:"biography,omitempty"`
+	Location  string             `bson:"location" json:"location,omitempty"`
+	WebSite   string             `bson:"webSite" json:"webSite,omitempty"`
 }
