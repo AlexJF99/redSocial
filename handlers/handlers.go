@@ -15,6 +15,8 @@ func Mapping() {
 	router := mux.NewRouter()
 
 	router.HandleFunc("/registro", middlewares.CheckBD(routers.Regist)).Methods("POST")
+	router.HandleFunc("/login", middlewares.CheckBD(routers.Login)).Methods("POST")
+	//router.HandleFunc("/profile", middlewares.CheckBD(middlewares.ValidJWT(routers.Profile))).Methods("GET")
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
