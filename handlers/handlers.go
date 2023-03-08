@@ -16,7 +16,7 @@ func Mapping() {
 
 	router.HandleFunc("/registro", middlewares.CheckBD(routers.Regist)).Methods("POST")
 	router.HandleFunc("/login", middlewares.CheckBD(routers.Login)).Methods("POST")
-	//router.HandleFunc("/profile", middlewares.CheckBD(middlewares.ValidJWT(routers.Profile))).Methods("GET")
+	router.HandleFunc("/profile", middlewares.CheckBD(middlewares.ValidJWT(routers.LookProfile))).Methods("GET")
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
